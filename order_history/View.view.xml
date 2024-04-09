@@ -1,0 +1,53 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="ns.order_history.Card">
+    <Table
+			items="{
+				path: '/'
+			}"
+	>
+        <columns>
+            <Column>
+				<Text text="ID" />
+			</Column>
+			<Column>
+				<Text text="External ID" />
+			</Column>
+			<Column>
+				<Text text="Shipping Customer Name" />
+			</Column>
+			<Column>
+				<Text text="Facility" />
+			</Column>
+            <Column>
+				<Text text="Requested Delivery Date" />
+			</Column>
+            <Column>
+				<Text text="Status" />
+			</Column>
+        </columns>
+        <items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<Text
+						text="{ID}" />
+					<Text
+						text="{ExternalID}" />
+					<Text
+						text="{ShippingCustomerName}" />
+					<Text
+						text="{Facility}" />
+					<Text
+						text="{RequestedDeliveryDate}" />
+					<ObjectStatus
+						inverted="true"
+						state="Success"
+						text="{Status}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+    </Table>
+</mvc:View>

@@ -1,0 +1,39 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:u="sap.ui.unified"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="ns.sample_component.Card">
+    <VBox
+        class="sapUiSmallMargin"
+        justifyContent="SpaceBetween">
+        <Label
+            text="ExternalID"
+        />
+        <Input/>
+        <Label
+            text="Facility"
+        />
+        <Input/>
+        <Label
+            text="Estimated Arrival Date"
+        />
+        <Input/>
+        <Label
+            text="Delivery Note"
+        />
+        <Input/>
+        <Label
+            text="Upload File"
+        />
+		<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			/>
+        <Toolbar style="Clear" class="sapUiTinyMarginTop" >
+            <ToolbarSpacer/>
+            <Button text="Upload" type="Emphasized" />
+        </Toolbar>
+    </VBox>
+</mvc:View>

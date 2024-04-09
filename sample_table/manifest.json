@@ -1,0 +1,54 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "ns.sample_table",
+		"type": "card",
+		"title": "incoming shipment history",
+		"subTitle": "history",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://bus-public-transport"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "ns.sample_table.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"Card.controller.js"
+				]
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+        "designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://shipping-status"
+			},
+			"title": "Incoming shipment history"
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

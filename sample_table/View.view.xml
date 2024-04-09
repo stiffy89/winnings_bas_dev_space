@@ -1,0 +1,41 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="ns.sample_table.Card">
+    <Table
+			items="{
+				path: '/'
+			}"
+	>
+        <columns>
+            <Column>
+				<Text text="Shipment ID" />
+			</Column>
+			<Column>
+				<Text text="External ID" />
+			</Column>
+			<Column>
+				<Text text="Estimated Arrival Date" />
+			</Column>
+			<Column>
+				<Text text="Facility" />
+			</Column>
+        </columns>
+        <items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<Text
+						text="{ShipmentID}" />
+					<Text
+						text="{ExternalID}" />
+					<Text
+						text="{EstArrivalDate}" />
+					<Text
+						text="{Facility}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+    </Table>
+</mvc:View>
