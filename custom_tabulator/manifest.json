@@ -1,0 +1,72 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "ns.custom_tabulator",
+		"type": "card",
+		"title": "custom tabulator demo",
+		"subTitle": "tabulator demo",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+        "deviceTypes": {"desktop": true, "phone": true, "tablet": true},
+		"icons": {
+			"icon": "sap-icon://bus-public-transport"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "ns.custom_tabulator.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"Card.controller.js"
+				]
+			}
+		},
+		"resources": {
+			"css": [
+			  {
+				"uri": "css/tabulator/tabulator.css"
+			  },
+			  {
+				"uri": "css/tabulator/tabulator_simple.css"
+			  },
+			  {
+				"uri": "css/tabulator/tabulator_edit_layer.css"
+			  }
+			],
+			"js" : [
+			  {
+				"uri" : "libs/tabulator.js"
+			  }
+			]
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+        "designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://table-chart"
+			},
+			"title": "Sample Tabulator Table"
+		}
+	},
+    "sap.platform.mobilecards": {
+        "compatible": false
+    }
+}

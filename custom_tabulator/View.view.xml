@@ -1,0 +1,15 @@
+<mvc:View xmlns:core="sap.ui.core"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          width="100%"
+          controllerName="ns.custom_tabulator.Card">
+    <VBox
+        class="sapUiSmallMargin"
+        justifyContent="SpaceBetween">
+        <core:HTML
+            content='&lt;div id=&quot;demoTable&quot;&gt;&lt;div&gt;'
+            afterRendering='renderDemoTable'
+        />
+    </VBox>
+</mvc:View>
